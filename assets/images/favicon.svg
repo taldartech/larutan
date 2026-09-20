@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="popGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DF3C6D"/>
+      <stop offset="50%" stop-color="#EB8E05"/>
+      <stop offset="100%" stop-color="#6E9922"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#FFFDF9"/>
+  <!-- Stick -->
+  <rect x="28" y="40" width="8" height="18" rx="4" fill="#C59B6D"/>
+  <!-- Popsicle Body -->
+  <path d="M20 18 C20 11.37 25.37 6 32 6 C38.63 6 44 11.37 44 18 L44 42 C44 43.1 43.1 44 42 44 L22 44 C20.9 44 20 43.1 20 42 Z" fill="url(#popGrad)"/>
+  <!-- Highlights -->
+  <path d="M24 16 C24 13 27 10 32 10" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.8"/>
+  <circle cx="25" cy="24" r="1.5" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="39" cy="30" r="1.5" fill="#FFFFFF" opacity="0.9"/>
+</svg>

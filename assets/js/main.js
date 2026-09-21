@@ -130,21 +130,43 @@ function initEnquiryForms() {
       const emailInput = form.querySelector("[name=\"email\"]");
       const messageInput = form.querySelector("[name=\"message\"]");
 
-      if (nameInput && !nameInput.value.trim()) {
+      const name = nameInput ? nameInput.value.trim() : "";
+      const phone = phoneInput ? phoneInput.value.trim() : "";
+      const email = emailInput ? emailInput.value.trim() : "";
+      const message = messageInput ? messageInput.value.trim() : "";
+
+      if (!name) {
         showToast("Please enter your name", "error");
-        nameInput.focus();
+        if (nameInput) nameInput.focus();
         return;
       }
 
-      if (phoneInput && !phoneInput.value.trim()) {
+      if (!phone) {
         showToast("Please enter your phone number", "error");
-        phoneInput.focus();
+        if (phoneInput) phoneInput.focus();
         return;
       }
 
-      // Success
-      showToast("Thank you! Your enquiry has been received. We will reach out to you shortly.", "success");
-      form.reset();
+      // Build formatted WhatsApp message
+      let text = `*New Website Enquiry — Larutan Real Fruit Popsicles*\n\n`;
+      text += `*Name:* ${name}\n`;
+      text += `*Phone:* ${phone}\n`;
+      if (email) {
+        text += `*Email:* ${email}\n`;
+      }
+      if (message) {
+        text += `*Message:* ${message}\n`;
+      }
+
+      const whatsappNumber = "919602244141";
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+      showToast("Opening WhatsApp to send your enquiry...", "success");
+
+      setTimeout(() => {
+        window.open(whatsappUrl, "_blank");
+        form.reset();
+      }, 600);
     });
   });
 

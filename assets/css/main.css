@@ -940,22 +940,49 @@ p:last-child {
   color: var(--text-muted);
 }
 
-/* Card Accent Theming */
-.flavour-card[data-flavour="mango"] {
-  --card-accent: var(--mango-primary);
-}
-.flavour-card[data-flavour="strawberry"] {
-  --card-accent: var(--strawberry-primary);
-}
-.flavour-card[data-flavour="watermelon"] {
-  --card-accent: var(--watermelon-primary);
-}
-.flavour-card[data-flavour="lime"] {
-  --card-accent: var(--lime-primary);
-}
-.flavour-card[data-flavour="jamun"] {
-  --card-accent: var(--jamun-primary);
-}
+/* Card Accent Theming for Official Flavours */
+.flavour-card[data-flavour="rasila-raja"],
+.flavour-card[data-flavour="mango"] { --card-accent: var(--mango-primary); }
+
+.flavour-card[data-flavour="laal-lazzat"],
+.flavour-card[data-flavour="strawberry"] { --card-accent: var(--strawberry-primary); }
+
+.flavour-card[data-flavour="jamnu-jhatka"],
+.flavour-card[data-flavour="jamun"] { --card-accent: var(--jamun-primary); }
+
+.flavour-card[data-flavour="pineapple-punch"],
+.flavour-card[data-flavour="pineapple"] { --card-accent: #EAB308; }
+
+.flavour-card[data-flavour="kiwi-kick"],
+.flavour-card[data-flavour="kiwi"] { --card-accent: #84CC16; }
+
+.flavour-card[data-flavour="peru-pataka"],
+.flavour-card[data-flavour="peru"] { --card-accent: #FB7185; }
+
+.flavour-card[data-flavour="narangi-nasha"],
+.flavour-card[data-flavour="narangi"] { --card-accent: #F97316; }
+
+.flavour-card[data-flavour="imli-inferno"],
+.flavour-card[data-flavour="imli"] { --card-accent: #B45309; }
+
+.flavour-card[data-flavour="herbal-hungama"],
+.flavour-card[data-flavour="herbal"] { --card-accent: #10B981; }
+
+.flavour-card[data-flavour="nariyal-nirvana"],
+.flavour-card[data-flavour="nariyal"] { --card-accent: #0D9488; }
+
+.flavour-card[data-flavour="falsa-fever"],
+.flavour-card[data-flavour="falsa"] { --card-accent: #7E22CE; }
+
+.flavour-card[data-flavour="falahar-fiesta"],
+.flavour-card[data-flavour="falahar"] { --card-accent: #D97706; }
+
+.flavour-card[data-flavour="passion-panga"],
+.flavour-card[data-flavour="passion"] { --card-accent: #E11D48; }
+
+.flavour-card[data-flavour="kiwi-strawberry"] { --card-accent: #E11D48; }
+
+.flavour-card[data-flavour="tropical-twist"] { --card-accent: #F59E0B; }
 
 /* Filter Bar (on Popsicles Page) */
 .filter-bar {

@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initFlavourFilters();
   initEnquiryForms();
   initSmoothScroll();
+  initLaunchBannerModal();
 });
 
 /**
@@ -216,5 +217,56 @@ function initSmoothScroll() {
         });
       }
     });
+  });
+}
+
+/**
+ * Grand Launch Announcement Banner Modal
+ */
+function initLaunchBannerModal() {
+  const modal = document.getElementById("launch-banner-modal");
+  if (!modal) return;
+
+  const closeBtns = modal.querySelectorAll(".launch-modal-close, .launch-modal-dismiss");
+  const openBtns = document.querySelectorAll(".open-launch-modal, #open-launch-banner");
+
+  function openModal() {
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  // Display the banner on landing across all pages
+  setTimeout(() => {
+    openModal();
+  }, 450);
+
+  closeBtns.forEach(btn => {
+    btn.addEventListener("click", closeModal);
+  });
+
+  openBtns.forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+  // Close when clicking overlay outside card
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Close on Escape key press
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("active")) {
+      closeModal();
+    }
   });
 }

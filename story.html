@@ -24,6 +24,24 @@
 <body>
 
   <!-- ==========================================================================
+       GRAND LAUNCH ANNOUNCEMENT BAR
+       ========================================================================== -->
+  <aside class="announcement-bar" role="region" aria-label="Grand Launch Announcement">
+    <div class="container announcement-bar-container">
+      <div class="announcement-text">
+        <span class="announcement-tag">Grand Launch</span>
+        <span>Join us this <strong>Saturday, 27th Sep (5:00 PM onwards)</strong> at <strong>RKAY Mall, Udaipur</strong>!</span>
+      </div>
+      <button type="button" class="announcement-link-btn" id="open-launch-banner" aria-haspopup="dialog">
+        View Invite
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
        HEADER & NAVIGATION
        ========================================================================== -->
   <header class="site-header">
@@ -300,6 +318,35 @@
       </div>
     </div>
   </footer>
+
+  <!-- ==========================================================================
+       GRAND LAUNCH ANNOUNCEMENT MODAL
+       ========================================================================== -->
+  <div id="launch-banner-modal" class="launch-modal-overlay" role="dialog" aria-modal="true" aria-label="Grand Launch Invitation — RKAY Mall, Udaipur">
+    <div class="launch-modal-card">
+      <button type="button" class="launch-modal-close" id="launch-modal-close" aria-label="Close Grand Launch Invitation">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="launch-modal-media">
+        <img src="assets/images/banner.jpeg" alt="Larutan Grand Launch Invitation — 27th September Saturday 5:00 PM Onwards at RKAY Mall Udaipur" class="launch-modal-img" width="1132" height="1600">
+      </div>
+      <div class="launch-modal-footer">
+        <a href="https://share.google/eqdsOeeqn8STSRf2m" target="_blank" rel="noopener noreferrer" class="btn btn-mango btn-sm" style="flex: 1; text-align: center; font-weight: 700;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 4px; vertical-align: -2px;">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          Get Directions to RKAY Mall
+        </a>
+        <button type="button" class="btn btn-secondary btn-sm launch-modal-dismiss">
+          Dismiss
+        </button>
+      </div>
+    </div>
+  </div>
 
   <script src="assets/js/main.js"></script>
 </body>

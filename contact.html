@@ -23,6 +23,24 @@
 </head>
 <body>
 
+  <!-- ==========================================================================
+       GRAND LAUNCH ANNOUNCEMENT BAR
+       ========================================================================== -->
+  <aside class="announcement-bar" role="region" aria-label="Grand Launch Announcement">
+    <div class="container announcement-bar-container">
+      <div class="announcement-text">
+        <span class="announcement-tag">Grand Launch</span>
+        <span>Join us this <strong>Saturday, 27th Sep (5:00 PM onwards)</strong> at <strong>RKAY Mall, Udaipur</strong>!</span>
+      </div>
+      <button type="button" class="announcement-link-btn" id="open-launch-banner" aria-haspopup="dialog">
+        View Invite
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </div>
+  </aside>
+
   <!-- Header -->
   <header class="site-header">
     <div class="container header-container">
@@ -204,52 +222,97 @@
       </div>
     </section>
 
-    <!-- Enquiry Form Section -->
-    <section class="section section-sand" id="enquiry">
-      <div class="container" style="max-width: 800px;">
-        <div class="section-header">
-          <span class="badge badge-teal section-pretitle">Send a Message</span>
-          <h2 class="section-title">Send Us an Enquiry</h2>
-          <p class="section-desc">
-            Whether you have a question about our flavours or want to share your experience, write to us below.
-          </p>
-        </div>
+    <!-- Enquiry Section: Content + Compact Form Grid -->
+    <section class="section section-sand" id="enquiry" style="padding: clamp(3rem, 5vw, 4.5rem) 0;">
+      <div class="container enquiry-section-grid">
 
-        <div class="form-card">
-          <form class="larutan-form" novalidate>
-            <div class="form-group">
-              <label for="enquiry-name" class="form-label">Your Name *</label>
-              <input type="text" id="enquiry-name" name="name" class="form-control" placeholder="e.g. Aakash Sharma" required>
+        <!-- Left Column: Context, Reassurance & Features -->
+        <div class="enquiry-content-col">
+          <span class="badge badge-teal" style="margin-bottom: 0.85rem;">Fast WhatsApp Connect</span>
+          <h2 style="margin-bottom: 0.85rem; font-size: clamp(2rem, 3.5vw, 2.5rem);">Send Us an Enquiry</h2>
+          <p class="text-lead" style="margin-bottom: 1.75rem; font-size: 1.05rem; color: var(--text-muted);">
+            Have a question about our real fruit popsicles, planning party packs for an occasion, or looking to connect with our team? Fill out the quick form and we’ll respond directly on WhatsApp.
+          </p>
+
+          <div class="enquiry-features-list">
+            <div class="enquiry-feature-item">
+              <div class="enquiry-feature-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="enquiry-feature-title">Direct WhatsApp Replies</h3>
+                <p class="enquiry-feature-desc">Routed directly to our team at +91 96022 44141 for instant answers.</p>
+              </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;" class="form-grid-2">
+            <div class="enquiry-feature-item">
+              <div class="enquiry-feature-icon" aria-hidden="true" style="color: var(--mango-primary);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+              </div>
+              <div>
+                <h3 class="enquiry-feature-title">Party & Celebration Packs</h3>
+                <p class="enquiry-feature-desc">Insulated packaging solutions available for events, birthdays, and weddings.</p>
+              </div>
+            </div>
+
+            <div class="enquiry-feature-item">
+              <div class="enquiry-feature-icon" aria-hidden="true" style="color: var(--strawberry-primary);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3 class="enquiry-feature-title">Storefront Hours</h3>
+                <p class="enquiry-feature-desc">Open daily 11:00 AM – 10:00 PM at R K Mall, Panchwati, Udaipur.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Compact Form Card -->
+        <div class="form-card compact-form-card">
+          <form class="larutan-form" novalidate>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="enquiry-name" class="form-label">Your Name *</label>
+                <input type="text" id="enquiry-name" name="name" class="form-control" placeholder="e.g. Aakash Sharma" required>
+              </div>
+
               <div class="form-group">
                 <label for="enquiry-phone" class="form-label">Phone Number *</label>
                 <input type="tel" id="enquiry-phone" name="phone" class="form-control" placeholder="e.g. 9876543210" required>
               </div>
+            </div>
 
-              <div class="form-group">
-                <label for="enquiry-email" class="form-label">Email Address</label>
-                <input type="email" id="enquiry-email" name="email" class="form-control" placeholder="e.g. aakash@example.com">
-              </div>
+            <div class="form-group">
+              <label for="enquiry-email" class="form-label">Email Address <span style="font-weight: 400; color: var(--text-muted); font-size: 0.8rem;">(Optional)</span></label>
+              <input type="email" id="enquiry-email" name="email" class="form-control" placeholder="e.g. aakash@example.com">
             </div>
 
             <div class="form-group">
               <label for="enquiry-message" class="form-label">Your Message *</label>
-              <textarea id="enquiry-message" name="message" class="form-control" placeholder="Tell us how we can help you..." rows="4" required></textarea>
+              <textarea id="enquiry-message" name="message" class="form-control" placeholder="How can we help you?" rows="3" required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.6rem;">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <button type="submit" class="btn btn-primary" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 0.55rem; padding: 0.85rem 1.25rem;">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
               </svg>
               Send Enquiry via WhatsApp
             </button>
-            <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 0.75rem;">
-              Your message will open directly in WhatsApp to chat with our team (+91 96022 44141).
+            <p style="font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: 0.65rem; margin-bottom: 0;">
+              Opens WhatsApp chat directly with our team (+91 96022 44141).
             </p>
           </form>
         </div>
+
       </div>
     </section>
 
@@ -333,6 +396,35 @@
       </div>
     </div>
   </footer>
+
+  <!-- ==========================================================================
+       GRAND LAUNCH ANNOUNCEMENT MODAL
+       ========================================================================== -->
+  <div id="launch-banner-modal" class="launch-modal-overlay" role="dialog" aria-modal="true" aria-label="Grand Launch Invitation — RKAY Mall, Udaipur">
+    <div class="launch-modal-card">
+      <button type="button" class="launch-modal-close" id="launch-modal-close" aria-label="Close Grand Launch Invitation">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="launch-modal-media">
+        <img src="assets/images/banner.jpeg" alt="Larutan Grand Launch Invitation — 27th September Saturday 5:00 PM Onwards at RKAY Mall Udaipur" class="launch-modal-img" width="1132" height="1600">
+      </div>
+      <div class="launch-modal-footer">
+        <a href="https://share.google/eqdsOeeqn8STSRf2m" target="_blank" rel="noopener noreferrer" class="btn btn-mango btn-sm" style="flex: 1; text-align: center; font-weight: 700;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 4px; vertical-align: -2px;">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          Get Directions to RKAY Mall
+        </a>
+        <button type="button" class="btn btn-secondary btn-sm launch-modal-dismiss">
+          Dismiss
+        </button>
+      </div>
+    </div>
+  </div>
 
   <script src="assets/js/main.js"></script>
 </body>

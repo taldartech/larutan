@@ -1890,11 +1890,26 @@ textarea.form-control {
   padding-top: 2rem;
   font-size: 0.88rem;
   opacity: 0.65;
+  text-align: center;
+}
+
+.footer-bottom a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-bottom a:hover {
+  color: var(--mango-light);
+  opacity: 1;
 }
 
 @media (min-width: 768px) {
   .footer-bottom {
     flex-direction: row;
+    flex-wrap: wrap;
+    text-align: left;
   }
 }
 

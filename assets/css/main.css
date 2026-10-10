@@ -1925,3 +1925,378 @@ textarea.form-control {
     scroll-behavior: auto !important;
   }
 }
+
+/* ==========================================================================
+   NAVRATRI 2026 SPECIAL PROMOTIONAL BANNER & LIGHTBOX
+   ========================================================================== */
+
+/* 1. Top Announcement Bar */
+.navratri-announcement-bar {
+  background: linear-gradient(135deg, #5C0B16 0%, #831828 50%, #5C0B16 100%);
+  color: #FFFDF9;
+  padding: 0.65rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  border-bottom: 2px solid #E8B446;
+  text-align: center;
+  position: relative;
+  z-index: 1010;
+}
+
+.navratri-bar-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.navratri-bar-badge {
+  background: #E8B446;
+  color: #4A050F;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 0.18rem 0.6rem;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.navratri-bar-link {
+  color: #FFE6A8;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.navratri-bar-link:hover {
+  color: #FFFFFF;
+}
+
+/* 2. Main Navratri Promo Section */
+.navratri-section {
+  background: linear-gradient(160deg, #4F0913 0%, #751523 45%, #590B16 100%);
+  color: #FFFDF9;
+  padding: 4.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.navratri-section::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 180, 70, 0.18) 0%, rgba(232, 180, 70, 0) 70%);
+  pointer-events: none;
+}
+
+.navratri-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .navratri-grid {
+    grid-template-columns: 1.05fr 1fr;
+    gap: 3.5rem;
+  }
+}
+
+/* Poster Card Display */
+.navratri-poster-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), 0 0 0 3px rgba(232, 180, 70, 0.4);
+  cursor: pointer;
+  transition: transform 0.35s var(--ease-smooth), box-shadow 0.35s var(--ease-smooth);
+}
+
+.navratri-poster-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.55), 0 0 0 4px rgba(232, 180, 70, 0.8);
+}
+
+.navratri-poster-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.navratri-poster-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(50, 4, 11, 0.8) 0%, rgba(50, 4, 11, 0) 50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.navratri-poster-card:hover .navratri-poster-overlay {
+  opacity: 1;
+}
+
+.poster-zoom-btn {
+  background: rgba(232, 180, 70, 0.95);
+  color: #4A050F;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.88rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Navratri Content Box */
+.navratri-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(232, 180, 70, 0.2);
+  border: 1px solid rgba(232, 180, 70, 0.5);
+  color: #FFE6A8;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1rem;
+}
+
+.navratri-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  font-weight: 900;
+  color: #FFFFFF;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navratri-title-gold {
+  color: #F8CB68;
+}
+
+.navratri-dates-pill {
+  display: inline-block;
+  background: #E8B446;
+  color: #4A050F;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.05rem;
+  padding: 0.45rem 1.25rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.navratri-desc {
+  font-size: 1.08rem;
+  line-height: 1.6;
+  color: #F7E7E7;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+/* Venues Grid */
+.navratri-venues-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 576px) {
+  .navratri-venues-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.venue-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(232, 180, 70, 0.35);
+  border-radius: var(--radius-sm);
+  padding: 1.15rem;
+  backdrop-filter: blur(8px);
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.venue-card:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(232, 180, 70, 0.7);
+}
+
+.venue-tag {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: #FFE6A8;
+  margin-bottom: 0.2rem;
+}
+
+.venue-sub {
+  font-size: 0.85rem;
+  color: #E6D0D0;
+}
+
+/* CTA Buttons */
+.navratri-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #FAD675 0%, #E8B446 100%);
+  color: #4A050F;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  border: none;
+  padding: 0.85rem 1.8rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 8px 24px rgba(232, 180, 70, 0.35);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(232, 180, 70, 0.5);
+  color: #2D0209;
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: #FFE6A8;
+  border: 2px solid rgba(232, 180, 70, 0.6);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-gold:hover {
+  background: rgba(232, 180, 70, 0.15);
+  border-color: #E8B446;
+  color: #FFFFFF;
+}
+
+/* Poster Auto-Popup Landing Modal */
+.navratri-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 2, 4, 0.92);
+  backdrop-filter: blur(12px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s var(--ease-smooth), visibility 0.4s var(--ease-smooth);
+}
+
+.navratri-modal-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navratri-modal-content {
+  position: relative;
+  max-width: 540px;
+  width: 100%;
+  max-height: 94vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0.9);
+  transition: transform 0.4s var(--ease-spring);
+}
+
+.navratri-modal-overlay.is-active .navratri-modal-content {
+  transform: scale(1);
+}
+
+.navratri-modal-img {
+  max-width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8), 0 0 0 3px rgba(232, 180, 70, 0.6);
+}
+
+.navratri-modal-close {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  background: #E8B446;
+  color: #4A050F;
+  border: 2px solid #FFFFFF;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.navratri-modal-close:hover {
+  transform: scale(1.1);
+  background: #FAD675;
+}
+
+.navratri-modal-footer-bar {
+  margin-top: 0.85rem;
+  text-align: center;
+}
+
+.btn-modal-dismiss {
+  background: rgba(232, 180, 70, 0.95);
+  color: #4A050F;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.88rem;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn-modal-dismiss:hover {
+  background: #FFFFFF;
+  color: #6E0D1B;
+  transform: translateY(-2px);
+}
+

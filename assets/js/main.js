@@ -9,7 +9,60 @@ document.addEventListener("DOMContentLoaded", () => {
   initFlavourFilters();
   initEnquiryForms();
   initSmoothScroll();
+  initNavratriModal();
 });
+
+/**
+ * Navratri Poster Landing Auto-Popup Modal
+ */
+function initNavratriModal() {
+  const modalOverlay = document.getElementById("navratriModal");
+  const modalImg = document.getElementById("navratriModalImg");
+  const closeBtn = document.getElementById("navratriModalClose");
+  const dismissBtn = document.getElementById("navratriModalDismissBtn");
+  const triggers = document.querySelectorAll("[data-navratri-trigger]");
+
+  if (!modalOverlay || !modalImg) return;
+
+  function openModal(imgSrc) {
+    if (imgSrc) modalImg.src = imgSrc;
+    modalOverlay.classList.add("is-active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    modalOverlay.classList.remove("is-active");
+    document.body.style.overflow = "";
+  }
+
+  // Auto-open modal when landing on the website
+  setTimeout(() => {
+    openModal("assets/images/navratri-poster.jpg");
+  }, 500);
+
+  triggers.forEach(trigger => {
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      const src = trigger.getAttribute("data-poster-src") || "assets/images/navratri-poster.jpg";
+      openModal(src);
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
+  if (dismissBtn) dismissBtn.addEventListener("click", closeModal);
+
+  modalOverlay.addEventListener("click", (e) => {
+    if (e.target === modalOverlay) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modalOverlay.classList.contains("is-active")) {
+      closeModal();
+    }
+  });
+}
 
 /**
  * Sticky Header Scroll State

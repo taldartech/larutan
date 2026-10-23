@@ -86,7 +86,9 @@
 }
 
 /* --- Base & Reset --- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -111,7 +113,8 @@ body {
   flex-direction: column;
 }
 
-img, svg {
+img,
+svg {
   display: block;
   max-width: 100%;
   height: auto;
@@ -123,7 +126,10 @@ a {
   transition: color 0.2s ease, opacity 0.2s ease;
 }
 
-button, input, textarea, select {
+button,
+input,
+textarea,
+select {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -135,7 +141,8 @@ button {
   cursor: pointer;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -156,7 +163,12 @@ ul, ol {
 }
 
 /* --- Typography Hierarchy --- */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: var(--text-heading);
   line-height: 1.15;
@@ -200,10 +212,21 @@ p:last-child {
   color: var(--text-muted);
 }
 
-.text-mango { color: var(--mango-primary); }
-.text-strawberry { color: var(--strawberry-primary); }
-.text-teal { color: var(--teal-primary); }
-.text-lime { color: var(--lime-primary); }
+.text-mango {
+  color: var(--mango-primary);
+}
+
+.text-strawberry {
+  color: var(--strawberry-primary);
+}
+
+.text-teal {
+  color: var(--teal-primary);
+}
+
+.text-lime {
+  color: var(--lime-primary);
+}
 
 /* --- Badges & Pills --- */
 .badge {
@@ -590,8 +613,8 @@ p:last-child {
   position: relative;
   padding: clamp(2rem, 5vw, 4.5rem) 0 clamp(3rem, 6vw, 6rem);
   background: radial-gradient(circle at 80% 20%, rgba(255, 242, 196, 0.5) 0%, transparent 60%),
-              radial-gradient(circle at 10% 80%, rgba(253, 232, 238, 0.4) 0%, transparent 50%),
-              var(--bg-cream);
+    radial-gradient(circle at 10% 80%, rgba(253, 232, 238, 0.4) 0%, transparent 50%),
+    var(--bg-cream);
   overflow: hidden;
 }
 
@@ -730,8 +753,15 @@ p:last-child {
 }
 
 @keyframes floatSlow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 /* ==========================================================================
@@ -942,47 +972,77 @@ p:last-child {
 
 /* Card Accent Theming for Official Flavours */
 .flavour-card[data-flavour="rasila-raja"],
-.flavour-card[data-flavour="mango"] { --card-accent: var(--mango-primary); }
+.flavour-card[data-flavour="mango"] {
+  --card-accent: var(--mango-primary);
+}
 
 .flavour-card[data-flavour="laal-lazzat"],
-.flavour-card[data-flavour="strawberry"] { --card-accent: var(--strawberry-primary); }
+.flavour-card[data-flavour="strawberry"] {
+  --card-accent: var(--strawberry-primary);
+}
 
 .flavour-card[data-flavour="jamnu-jhatka"],
-.flavour-card[data-flavour="jamun"] { --card-accent: var(--jamun-primary); }
+.flavour-card[data-flavour="jamun"] {
+  --card-accent: var(--jamun-primary);
+}
 
 .flavour-card[data-flavour="pineapple-punch"],
-.flavour-card[data-flavour="pineapple"] { --card-accent: #EAB308; }
+.flavour-card[data-flavour="pineapple"] {
+  --card-accent: #EAB308;
+}
 
 .flavour-card[data-flavour="kiwi-kick"],
-.flavour-card[data-flavour="kiwi"] { --card-accent: #84CC16; }
+.flavour-card[data-flavour="kiwi"] {
+  --card-accent: #84CC16;
+}
 
 .flavour-card[data-flavour="peru-pataka"],
-.flavour-card[data-flavour="peru"] { --card-accent: #FB7185; }
+.flavour-card[data-flavour="peru"] {
+  --card-accent: #FB7185;
+}
 
 .flavour-card[data-flavour="narangi-nasha"],
-.flavour-card[data-flavour="narangi"] { --card-accent: #F97316; }
+.flavour-card[data-flavour="narangi"] {
+  --card-accent: #F97316;
+}
 
 .flavour-card[data-flavour="imli-inferno"],
-.flavour-card[data-flavour="imli"] { --card-accent: #B45309; }
+.flavour-card[data-flavour="imli"] {
+  --card-accent: #B45309;
+}
 
 .flavour-card[data-flavour="herbal-hungama"],
-.flavour-card[data-flavour="herbal"] { --card-accent: #10B981; }
+.flavour-card[data-flavour="herbal"] {
+  --card-accent: #10B981;
+}
 
 .flavour-card[data-flavour="nariyal-nirvana"],
-.flavour-card[data-flavour="nariyal"] { --card-accent: #0D9488; }
+.flavour-card[data-flavour="nariyal"] {
+  --card-accent: #0D9488;
+}
 
 .flavour-card[data-flavour="falsa-fever"],
-.flavour-card[data-flavour="falsa"] { --card-accent: #7E22CE; }
+.flavour-card[data-flavour="falsa"] {
+  --card-accent: #7E22CE;
+}
 
 .flavour-card[data-flavour="falahar-fiesta"],
-.flavour-card[data-flavour="falahar"] { --card-accent: #D97706; }
+.flavour-card[data-flavour="falahar"] {
+  --card-accent: #D97706;
+}
 
 .flavour-card[data-flavour="passion-panga"],
-.flavour-card[data-flavour="passion"] { --card-accent: #E11D48; }
+.flavour-card[data-flavour="passion"] {
+  --card-accent: #E11D48;
+}
 
-.flavour-card[data-flavour="kiwi-strawberry"] { --card-accent: #E11D48; }
+.flavour-card[data-flavour="kiwi-strawberry"] {
+  --card-accent: #E11D48;
+}
 
-.flavour-card[data-flavour="tropical-twist"] { --card-accent: #F59E0B; }
+.flavour-card[data-flavour="tropical-twist"] {
+  --card-accent: #F59E0B;
+}
 
 /* Filter Bar (on Popsicles Page) */
 .filter-bar {
@@ -1065,10 +1125,12 @@ p:last-child {
   background-color: var(--mango-light);
   color: var(--mango-primary);
 }
+
 .transformation-card:nth-child(2) .trans-step-badge {
   background-color: var(--strawberry-light);
   color: var(--strawberry-primary);
 }
+
 .transformation-card:nth-child(3) .trans-step-badge {
   background-color: var(--teal-light);
   color: var(--teal-primary);
@@ -1252,17 +1314,41 @@ p:last-child {
   color: var(--text-dark);
 }
 
-.value-card:nth-child(1) { --card-border-color: var(--mango-primary); }
-.value-card:nth-child(1) .value-icon-box { background: var(--mango-light); color: var(--mango-primary); }
+.value-card:nth-child(1) {
+  --card-border-color: var(--mango-primary);
+}
 
-.value-card:nth-child(2) { --card-border-color: var(--strawberry-primary); }
-.value-card:nth-child(2) .value-icon-box { background: var(--strawberry-light); color: var(--strawberry-primary); }
+.value-card:nth-child(1) .value-icon-box {
+  background: var(--mango-light);
+  color: var(--mango-primary);
+}
 
-.value-card:nth-child(3) { --card-border-color: var(--teal-primary); }
-.value-card:nth-child(3) .value-icon-box { background: var(--teal-light); color: var(--teal-primary); }
+.value-card:nth-child(2) {
+  --card-border-color: var(--strawberry-primary);
+}
 
-.value-card:nth-child(4) { --card-border-color: var(--jamun-primary); }
-.value-card:nth-child(4) .value-icon-box { background: var(--jamun-light); color: var(--jamun-primary); }
+.value-card:nth-child(2) .value-icon-box {
+  background: var(--strawberry-light);
+  color: var(--strawberry-primary);
+}
+
+.value-card:nth-child(3) {
+  --card-border-color: var(--teal-primary);
+}
+
+.value-card:nth-child(3) .value-icon-box {
+  background: var(--teal-light);
+  color: var(--teal-primary);
+}
+
+.value-card:nth-child(4) {
+  --card-border-color: var(--jamun-primary);
+}
+
+.value-card:nth-child(4) .value-icon-box {
+  background: var(--jamun-light);
+  color: var(--jamun-primary);
+}
 
 .value-card-title {
   font-size: 1.25rem;
@@ -1674,8 +1760,8 @@ textarea.form-control {
 .page-hero {
   padding: clamp(3rem, 6vw, 5.5rem) 0 clamp(2rem, 4vw, 3.5rem);
   background: radial-gradient(circle at 80% 30%, rgba(255, 242, 196, 0.4) 0%, transparent 60%),
-              radial-gradient(circle at 10% 70%, rgba(253, 232, 238, 0.3) 0%, transparent 50%),
-              var(--bg-cream);
+    radial-gradient(circle at 10% 70%, rgba(253, 232, 238, 0.3) 0%, transparent 50%),
+    var(--bg-cream);
   text-align: center;
 }
 
@@ -1719,6 +1805,7 @@ textarea.form-control {
   .story-chapter.reversed .story-text-col {
     order: 2;
   }
+
   .story-chapter.reversed .story-media-col {
     order: 1;
   }
@@ -1918,10 +2005,134 @@ textarea.form-control {
    ACCESSIBILITY & REDUCED MOTION
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* ==========================================================================
+   LARUTAN AT EVA PROMOTIONAL POPUP MODAL
+   ========================================================================== */
+.promo-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 14, 11, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s cubic-bezier(0.25, 0.1, 0.25, 1), visibility 0.35s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.promo-modal-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.promo-modal-content {
+  position: relative;
+  max-width: 520px;
+  width: 100%;
+  max-height: 94vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0.92);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.promo-modal-overlay.is-active .promo-modal-content {
+  transform: scale(1);
+}
+
+.promo-modal-img {
+  max-width: 100%;
+  max-height: 78vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-md, 16px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 0 2px rgba(235, 142, 5, 0.5);
+  display: block;
+}
+
+.promo-modal-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  background: var(--mango-primary, #EB8E05);
+  color: #1F1914;
+  border: 2px solid #FFFFFF;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.promo-modal-close svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  stroke: #1F1914;
+  pointer-events: none;
+}
+
+.promo-modal-close:hover {
+  transform: scale(1.1);
+  background: #FFB300;
+}
+
+.promo-modal-footer-bar {
+  margin-top: 0.85rem;
+  text-align: center;
+}
+
+.btn-modal-dismiss {
+  background: var(--mango-primary, #EB8E05);
+  color: #1F1914;
+  font-family: var(--font-heading, "Outfit", sans-serif);
+  font-weight: 700;
+  font-size: 0.88rem;
+  border: none;
+  padding: 0.55rem 1.35rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-modal-dismiss:hover {
+  background: #FFFFFF;
+  color: var(--text-dark, #1F1914);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 576px) {
+  .promo-modal-close {
+    top: -12px;
+    right: 0;
+  }
+
+  .promo-modal-img {
+    max-height: 72vh;
   }
 }

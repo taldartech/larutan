@@ -9,7 +9,60 @@ document.addEventListener("DOMContentLoaded", () => {
   initFlavourFilters();
   initEnquiryForms();
   initSmoothScroll();
+  initEvaModal();
 });
+
+/**
+ * Larutan at EVA Promotional Landing Auto-Popup Modal
+ */
+function initEvaModal() {
+  const modalOverlay = document.getElementById("evaModal");
+  const modalImg = document.getElementById("evaModalImg");
+  const closeBtn = document.getElementById("evaModalClose");
+  const dismissBtn = document.getElementById("evaModalDismissBtn");
+  const triggers = document.querySelectorAll("[data-eva-trigger]");
+
+  if (!modalOverlay || !modalImg) return;
+
+  function openModal(imgSrc) {
+    if (imgSrc) modalImg.src = imgSrc;
+    modalOverlay.classList.add("is-active");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    modalOverlay.classList.remove("is-active");
+    document.body.style.overflow = "";
+  }
+
+  // Auto-open modal when landing on the website (500ms delay for smooth render)
+  setTimeout(() => {
+    openModal("assets/images/Larutan at EVA.png");
+  }, 500);
+
+  triggers.forEach(trigger => {
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      const src = trigger.getAttribute("data-poster-src") || "assets/images/Larutan at EVA.png";
+      openModal(src);
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
+  if (dismissBtn) dismissBtn.addEventListener("click", closeModal);
+
+  modalOverlay.addEventListener("click", (e) => {
+    if (e.target === modalOverlay) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modalOverlay.classList.contains("is-active")) {
+      closeModal();
+    }
+  });
+}
 
 /**
  * Sticky Header Scroll State
